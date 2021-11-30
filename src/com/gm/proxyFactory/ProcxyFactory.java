@@ -1,4 +1,4 @@
-package com.gm.procxyFactory;
+package com.gm.proxyFactory;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -13,7 +13,7 @@ public class ProcxyFactory implements InvocationHandler {
         this.target = target;
     }
 
-    public Object createProcxy(){
+    public Object createProxy(){
         //目标类的类加载器
         ClassLoader loader = target.getClass().getClassLoader();
         //目标类实现的接口Class[]
