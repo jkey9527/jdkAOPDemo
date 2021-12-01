@@ -1,6 +1,7 @@
 package com.gm.test;
 
-import com.gm.procxyFactory.ProxyFactory;
+
+import com.gm.proxyFactory.ProcxyFactory;
 import com.gm.service.UserService;
 import com.gm.service.UserServiceImpl;
 import org.junit.Test;
@@ -11,12 +12,12 @@ public class TestAop {
         //目标对象
         UserService userService = new UserServiceImpl();
         //创建代理工厂
-        ProxyFactory proxyFactory = new ProxyFactory(userService);
+        ProcxyFactory proxyFactory = new ProcxyFactory(userService);
         //代理对象
-        UserService procxy = (UserService) proxyFactory.createProcxy();
+        UserService procxy = (UserService) proxyFactory.createProxy();
         //调用代理对象的登录方法
         procxy.login();
-        //调用代理对象的注册方法
+
         procxy.regist();
     }
 }
